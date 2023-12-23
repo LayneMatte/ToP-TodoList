@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bundle.js" defer></script>
+    <title>Todo List</title>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="headerText">CheckList</div>
+        </div>
+    </header>
+    <main>
+        <div class="leftMain">
+            <div class="priorityContainer">
+                <div class="inboxContainer" id="Inbox">
+                    <img src="./inbox.png" alt="inbox icon" class="inboxIcon"> 
+                    <div class="inboxText">Inbox</div>
+                </div>
+                <div class="todayContainer" id="Today">
+                    <img src="./today.png" alt="today icon" class="todayIcon">
+                    <div class="todayText">Today</div>
+                </div>
+                <div class="weekContainer" id="Next 7 Days">
+                    <img src="./week.png" alt="week icon" class="weekIcon">
+                    <div class="weekText">Next 7 Days</div>
+                </div>
+                <div class="importantContainer" id="Important">
+                    <img src="./priority.png" alt="important" class="importantIcon">
+                    <div class="importantText">Important</div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <div class="addProjectContainer">
+                    <div class="projectText">Projects</div>
+                    <img src="./plus.png" alt="add project" class="addProject">
+                </div>
+                <div class="inputContainer" style="display:none"></div>
+                <div class="projectItems">
+                    <div class="projectItemContainer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightMain">
+        <div class="rightMainHeader">
+            <div class="rightMainHeaderText">Inbox</div>
+            <div class="addTask">
+                <img src="./add.png" alt="add project" class="addTaskImg">
+                <!-- <div class="addTaskText">Add Task</div> -->
+            </div>
+        </div>
+            <div class="taskContainer">
+            </div>
+        <dialog class="addTaskWindow" close>
+            <form id="taskForm">
+                <section class="addTaskWindowMain">
+                    <div class="close">X</div>
+                    <div class="taskWindowHeaderContainer">
+                        <div class="addTaskHeader">New Task</div>
+                        <div class="required">Required Fields *</div>
+                    </div>
+                    <label for="taskName">Task Name: *</label><span class="tasknamerequired"></span>
+                        <input type="text" id="taskName" name="taskName" maxlength="40" />
+                    <label for="taskDescription">Description: </label>
+                        <input type="text" id="taskDescription" name="taskDescription" maxlength="150"/>
+                    <div class="dateprioritycontainer">
+                        <label for="dueDate">Due Date: *</label><span class="duedaterequired"></span>
+                            <input type="date" id="dueDate" name="dueDate"/>
+                        <label for="priority">Priority: *</label><span class="priorityrequired"></span>
+                            <select id="priority" name="priority">
+                                <option value="">--Please Choose an Option--</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                    </div>
+                    <label for="projectSelect">Project</label>
+                        <select name="projectSelect" id="projectSelect">
+                        </select>
+                </section>
+                <section class="submitSection">
+                    <div class="submit">Submit</div>
+                    <div class="reset">Reset</div>
+                </section>
+            </form>
+        </dialog>
+        <dialog class="editTaskWindow" close>
+            <form id="editTaskForm">
+                <section class="editTaskWindowMain">
+                    <div class="editClose">X</div>
+                    <div class="editTaskWindowHeaderContainer">
+                        <div class="editTaskHeader">Edit Task</div>
+                        <div class="editRequired">Required Fields *</div>
+                    </div>
+                    <label for="editTaskName">Task Name: *</label><span class="editTaskNameRequired"></span>
+                        <input type="text" id="editTaskName" name="taskName" maxlength="40" />
+                    <label for="editTaskDescription">Description: </label>
+                        <input type="text" id="editTaskDescription" name="editTaskDescription" maxlength="150"/>
+                    <div class="editDatePriorityContainer">
+                        <label for="editDueDate">Due Date: *</label><span class="editDueDateRequired"></span>
+                            <input type="date" id="editDueDate" name="editDueDate"/>
+                        <label for="editPriority">Priority: *</label><span class="editPriorityRequired"></span>
+                            <select id="editPriority" name="editPriority">
+                                <option value="">--Please Choose an Option--</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                    </div>
+                    <label for="editProjectSelect">Project</label>
+                        <select name="editProjectSelect" id="editProjectSelect">
+                        </select>
+                </section>
+                <section class="editSubmitSection">
+                    <div class="editSubmit">Submit</div>
+                    <div class="editReset">Reset</div>
+                </section>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <div class="githubContainer">
+            <img src="./whitegithublogo.png" alt="github-logo" class="githubLogo">
+            <div class="githubText">@LayneMatte</div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- <div class="task1">
+    <div class="taskLeft">
+        <div class="taskTitle">Chore</div>
+    </div>
+    <div class="taskMid">
+        <div class="taskDescription">Its time to do a chore !</div>
+    </div>
+    <div class="taskRight">
+        <div class="taskDueDate">10-09-2020</div>
+        <img src="./edit.png" alt="edit" class="taskContainerEdit">
+        <img src="./delete.png" alt="delete" class="taskContainerDelete">
+    </div>
+</div> -->
